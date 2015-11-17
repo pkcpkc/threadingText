@@ -1,0 +1,114 @@
+<html>
+<head>
+<script type="text/javascript" src="script/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="script/jquery.threadingText.js"></script>
+<script>
+	var startTime;
+	var textElementCount = 0;
+
+	function startLayouting() {
+		startTime = new Date().getTime();
+	}
+
+	function finishedLayouting(textElements, text) {
+		alert("Finished layouting in " + (new Date().getTime() - startTime)
+				+ "ms.");
+	}
+
+	function colorElement(cloneElement, text) {
+		// here you may manipulate newly cloned elements,
+		// e.g. position them as your local webdesigner requires it.
+		if (textElementCount++ % 2 == 0) {
+			cloneElement.css("background-color", "#008800");
+			cloneElement.css("color", "#ffffff");
+		}
+	}
+
+	function layoutExample2() {
+		// select all columns that are not the column to be cloned
+		$(".presetColumnExample2").threadingText( {
+			// listener function when starting
+			startLayout : startLayouting,
+			// listener function when finished
+			endLayout : finishedLayouting,
+			// element to be cloned for additional text elements
+			cloneTextElement : $(".protoColumn1"),
+			// clone element added and rendered - adjust as you like
+			endLayoutTextElement : colorElement,
+			// remove clone prototype element when finished
+			removeUnusedCloneTextElement : true
+		});
+	}
+</script>
+<style>
+.columnBasics {
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+	width: 200px;
+	height: 404px;
+	float: left;
+	margin: 10px;
+	text-align: justify;
+}
+</style>
+<title>Example 2</title>
+</head>
+<body>
+
+<h1>Example 2</h1>
+<h2>Fill preset text rectangles and add new ones if required</h2>
+
+Example 2 demonstrates how threading text fills text in predefined text containers and adds new text containers by cloning a specified text container prototype; additionally all second text containers beeing layouted will be colored.<br/>
+
+<input type="button" value="Layout" onClick="layoutExample2();" />
+
+<div id="secondExample" style="width: 1400px; height: 600px;">
+
+<div style="" class="presetColumnExample2 columnBasics">
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+erat, sed diam voluptua. <i>At vero eos et accusam et justo duo
+dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+est Lorem ipsum dolor sit amet.</i> Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+dolore magna aliquyam erat, sed diam voluptua. <b>At vero eos et
+accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+sea takimata sanctus est Lorem ipsum dolor sit amet.</b> Lorem ipsum dolor
+sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <i>At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</i><br />
+<br />
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
+eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+zzril delenit augue duis dolore te feugait nulla facilisi. <b>Lorem
+ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</b><br />
+<br />
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+suscipit lobortis nisl ut aliquip ex ea commodo consequat. <i>Duis
+autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+delenit augue duis dolore te feugait nulla facilisi.</i><br />
+<br />
+
+<b>Nam liber tempor cum soluta nobis eleifend option congue nihil
+imperdiet doming id quod mazim placerat facer.</b><br />
+<br />
+</div>
+
+<div style="height: 150px;" class="presetColumnExample2 columnBasics">
+</div>
+
+<div style="" class="protoColumn1 columnBasics">
+</div>
+
+</div>
+
+</body>
+</html>
