@@ -60,9 +60,10 @@ Check example1.html, example2.html and example3.html for further usage examples.
 If my code proved useful for you, you might want to consider to send a small [donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X2DYTPJDKKR8N) via PayPal.
 
 ## TODO
-* Integrate Travis CI for CI (see [Stackoverflow](http://stackoverflow.com/questions/13412211/using-travis-ci-for-client-side-javascript-libraries)).
+* Separate test code from production code
 * Make QUnit tests reliable
 * More tests
+* Integrate Travis CI for CI (see [Stackoverflow](http://stackoverflow.com/questions/13412211/using-travis-ci-for-client-side-javascript-libraries)).
 
 ## See also
 
