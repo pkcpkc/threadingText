@@ -12,8 +12,10 @@ node_js:
 before_install:
   - npm install -g grunt-cli
   - npm install grunt-contrib-qunit
+  - npm install -g bower
 install:
   - npm install
 before_script:
+  - bower install
 
 script: grunt --verbose --force
