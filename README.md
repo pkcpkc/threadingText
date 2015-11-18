@@ -3,6 +3,7 @@
 ![Build](https://travis-ci.org/pkcpkc/threadingText.svg)
 
 # threadingText
+![Thread Text](./threadtext.png)
 threadingText is a JavaScript jQuery plugin to enable [thread text](http://blogs.adobe.com/indesignpost/2011/04/quick-tip-master-text-threading-in-adobe-indesign/) in HTML.
 With a responsive web design and dynamic content using thread text is hard to achieve; here is where threadingText comes into play.
 
@@ -65,7 +66,7 @@ If my code proved useful for you, you might want to consider to send a small [do
 * Tag version
 * Make QUnit tests reliable
 * More tests
-* Integrate Travis CI for CI (see [Stackoverflow](http://stackoverflow.com/questions/13412211/using-travis-ci-for-client-side-javascript-libraries)).
+* Integrate jshint and code coverage
 
 ## See also
 
