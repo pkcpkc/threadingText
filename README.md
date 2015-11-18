@@ -1,5 +1,7 @@
 ![Platform](https://img.shields.io/badge/platform-JavaScript-lightgrey.svg)
 ![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)
+![Build](https://travis-ci.org/pkcpkc/threadingText.svg)
+
 # threadingText
 threadingText is a JavaScript jQuery plugin to enable [thread text](http://blogs.adobe.com/indesignpost/2011/04/quick-tip-master-text-threading-in-adobe-indesign/) in HTML.
 With a responsive web design and dynamic content using thread text is hard to achieve; here is where threadingText comes into play.

@@ -9,9 +9,11 @@ node_js:
   - "0.8"
   - "0.6"
   - "iojs"
+before_install:
+  - npm intall -g grunt-cli
+  - npm install grunt-contrib-qunit
+install:
+  - npm install
 before_script:
-  - sudo npm install grunt
-  - sudo npm install -g grunt-cli
-  - sudo npm install grunt-contrib-qunit
 
 script: grunt test --verbose --force
