@@ -10,7 +10,7 @@ node_js:
   - "0.6"
   - "iojs"
 before_install:
-  - npm intall -g grunt-cli
+  - npm install -g grunt-cli
   - npm install grunt-contrib-qunit
 install:
   - npm install
