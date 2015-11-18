@@ -9,12 +9,9 @@ node_js:
   - "0.8"
   - "0.6"
   - "iojs"
-before_install:
+install:
   - npm install -g grunt-cli
   - npm install grunt-contrib-qunit
   - npm install -g bower
-install:
-before_script:
   - bower install
-
-script: grunt --verbose --force
+script: grunt --verbose
