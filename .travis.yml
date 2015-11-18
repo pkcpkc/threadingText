@@ -14,7 +14,6 @@ before_install:
   - npm install grunt-contrib-qunit
   - npm install -g bower
 install:
-  - npm install
 before_script:
   - bower install
 
