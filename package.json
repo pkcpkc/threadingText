@@ -1,0 +1,25 @@
+{
+  "name": "threading-text",
+  "version": "1.0.0",
+  "description": "threadingText is a JavaScript jQuery plugin to enable thread text as known by Adobe Illustrator in HTML.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkcpkc/threadingText.git"
+  },
+  "keywords": [
+    "jquery",
+    "thread",
+    "text",
+    "threadingText"
+  ],
+  "author": "Paul Hackenberger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pkcpkc/threadingText/issues"
+  },
+  "homepage": "https://github.com/pkcpkc/threadingText#readme"
+}
