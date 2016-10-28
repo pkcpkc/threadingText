@@ -5,18 +5,19 @@
         <script type="text/javascript" src="../script/jquery.threadingText.js"></script>
         <script>
             var startTime;
+            var count = 0;
 
             function startLayouting() {
                 startTime = new Date().getTime();
             }
 
             function finishedLayouting() {
-                alert("Finished layouting in " + (new Date().getTime() - startTime)
-                    + "ms.");
+                progressListener("<b>Finished layouting in " + (new Date().getTime() - startTime)
+                    + "ms.</b>");
             }
 
             function progressListener(message) {
-                $("#log").append("<br>"+message);
+                $("#log").append("<br>#"+(count++)+" "+message);
             }
 
             function layoutExample3() {
@@ -27,11 +28,13 @@
                     removeUnusedCloneTextElement : true,
                     // listener function accepting two parameters: textElements, text
                     startLayout : function(textElements, text) {
+                    	startLayouting();
                         progressListener("startLayout");
                     },
                     // listener function accepting two parameters: textElements, text
                     endLayout : function(textElements, text) {
                         progressListener("endLayout");
+                        finishedLayouting();
                     },
                     // listener function accepting two parameters: textElement, text
                     startLayoutTextElement : function(textElement, text) {
