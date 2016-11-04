@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 language: javascript
 node_js:
   - "4.1"
