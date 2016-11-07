@@ -68,7 +68,7 @@
 
             module("Clone boxes");
             test("Fill boxes with text and clone boxes if required", function () {
-                const EXPECTED_NUMBER_OF_CLONED_BOXES = 10;
+                const EXPECTED_NUMBER_OF_CLONED_BOXES = 11;
 
                 var textBoxes = $("#cloneBoxes .textBox:not(.cloneBox)");
                 var firstBox = $(textBoxes.get(0));
@@ -92,6 +92,9 @@
                    "startLayout",
                    "startLayoutTextElement",
                    "endLayoutTextElement",
+                   "startLayoutTextElement",
+                   "endLayoutTextElement",
+                   "createCloneTextElement",
                    "startLayoutTextElement",
                    "endLayoutTextElement",
                    "createCloneTextElement",
