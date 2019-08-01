@@ -1,7 +1,7 @@
 sudo: true
 language: javascript
 node_js:
-  - "7"
+  - "6"
   - "iojs"
 install:
   - npm install -g grunt-cli
