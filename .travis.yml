@@ -12,7 +12,7 @@ node_js:
 install:
   - npm install -g grunt-cli
   - npm install grunt --save-dev
-  - npm install grunt-contrib-qunit
+  - npm install grunt-contrib-qunit --save-dev
   - npm install -g bower
   - bower install
 script: grunt --verbose
